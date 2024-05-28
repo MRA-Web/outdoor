@@ -9,7 +9,7 @@ body{
     background-color: #7076a4;
 
     header{
-        margin: 0;
+        padding: 0 15px;
         width: 100%;
         height: 100px;
         background-color: #313449;
@@ -22,7 +22,6 @@ body{
         
 
         .logo{
-            margin: 5px;
             color: white;
             text-decoration: none;
             align-content: center;
