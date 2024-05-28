@@ -5,67 +5,108 @@
 }
 
 body{
+    /* width: 98.7vw; */
+    width: 100%;
     background-color: #7076a4;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+/* definindo os que vão preencher a largura toda da página */
+body, header, main, footer{
+    width: 100% !important;
 }
 
 header{
+    position: fixed;
+    top: 0;
     padding: 10px;
-    height: 100px;
+    height: 70px;
     background-color: #313449;
     display: flex;
     flex-direction: row;
-    align-content: center;
-    text-align: center;
+
+
+    *{
+        color: #fff;
+        align-content: center;
+        text-align: center;
+    }
     
     .logo{
+        margin: 0 20px;
         color: white;
         text-decoration: none;
-        align-content: center;
     }
 
     .barra-navegacao{
         display: grid;
-        align-content: center;
-        
+
+        *{
+            align-content: center; 
+            text-align: center;
+        }
         ul{
-            margin: 0;
             list-style-type: none;
             display: flex;
             flex-direction: row;
 
             li{
                 margin: 0 3px;
-                text-align: center;
-
-                a{
-                    align-content: center;
-                    text-align: center;
-                    color: white;
-                    text-decoration: none;
-                }
             }
         }
-
-
     }
 }
 
 main{
-    padding: 10px;
-    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+    margin: 100px 0 40px 0; /* distanciando do header e do footer */
     color: white;
-    height : 100%;
+    min-height : 100%;
 
-    .secao-body{
-        padding: 100px 0;
+    .main-section-container {
+        padding: 20px;
+
+        /* o simbolo " > " significa que é filho direto, não descendente eventual */
+
+        > section{ /* nesse caso os containers médios */
+            height: fit-content;
+            padding: 50px 0;
+            margin: 20px 0;
+            border-radius: 15px;
+
+            .section-child{
+                border-radius: 5px;
+                padding: 30px;
+                margin: 15px 15px;
+                box-shadow: 0px 3px 10px rgb(0, 0, 0);
+            }       
+        }
+
+        .medium-container-1{
+            background-color: #bb9083;
+            .section-child{background-color:#cf264b;}
+        }
+
+       .medium-container-2{
+            background-color: #839dbb;
+            .section-child{background-color:#08185e;}
+        }
+
     }
 }
 
-footer{
+footer{ 
+    bottom: 0;
     background-color: #313449;
     color: white;
     height: 100px;
-    padding: 10px;
-
     align-content: center;
+    text-align: center;
+    
+    .footer-section-container{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
 }
