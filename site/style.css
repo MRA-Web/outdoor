@@ -5,13 +5,8 @@
 }
 
 body{
-    /* width: 98.7vw; */
-    width: 100%;
     background-color: #7076a4;
-
-    a{
-        text-decoration: none;
-    }
+    a{text-decoration: none;}
 }
 
 /* definindo os que vão preencher a largura toda da página */
@@ -28,23 +23,22 @@ header{
     display: flex;
     flex-direction: row;
 
-
-    *{
+    *{ /* todos dentro do header */
         color: #fff;
         align-content: center;
         text-align: center;
     }
     
-    .logo{
+    a.logo{
         margin: 0 20px;
         color: white;
         text-decoration: none;
     }
 
-    .barra-navegacao{
+    nav.barra-navegacao{
         display: grid;
 
-        *{
+        *{ /* todos dentro da nav.barra-navegacao */
             align-content: center; 
             text-align: center;
         }
@@ -53,9 +47,7 @@ header{
             display: flex;
             flex-direction: row;
 
-            li{
-                margin: 0 3px;
-            }
+            li{margin: 0 3px;}
         }
     }
 }
@@ -68,21 +60,21 @@ main{
     .main-section-container {
         padding: 20px;
 
-        /* o simbolo " > " significa que é filho direto, não descendente eventual */
-
-        > section{ /* nesse caso os containers médios */
+        .medium-container-1, .medium-container-2{ /* todos os containers médios */
             height: fit-content;
             padding: 50px 0;
             margin: 20px 0;
             border-radius: 15px;
 
-            .section-child{
+            .section-child{ /* os filhos dos containers médios */
                 border-radius: 5px;
                 padding: 30px;
                 margin: 15px 15px;
                 box-shadow: 0px 3px 10px rgb(0, 0, 0);
             }       
         }
+
+        /* mudando as cores individualmente */
 
         .medium-container-1{
             background-color: #bb9083;
@@ -93,7 +85,6 @@ main{
             background-color: #839dbb;
             .section-child{background-color:#08185e;}
         }
-
     }
 }
 
