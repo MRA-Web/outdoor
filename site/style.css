@@ -92,7 +92,7 @@ header{
 }
 
 main{
-    margin: 100px 0 40px 0; /* distanciando do header e do footer */
+    margin: 70px 0 40px 0; /* distanciando do header e do footer */
     color: white;
     min-height : 100%;
 
